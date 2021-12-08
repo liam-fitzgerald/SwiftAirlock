@@ -171,7 +171,7 @@ struct LoginBody {
     var code: String;
 }
 
-class Airlock {
+class AirlockClient {
     var ship: String;
     var code: String;
     var url: URL;

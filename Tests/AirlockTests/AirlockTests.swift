@@ -3,14 +3,14 @@ import Combine
 @testable import Airlock
 
 final class AirlockTests: XCTestCase {
-    var airlock: Airlock?;
+    var airlock: AirlockClient?;
     var cancellables: Set<AnyCancellable> = [];
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
         let expectation = self.expectation(description: "Login")
-        airlock = Airlock(ship: "~zod", code: "lidlut-tabwed-pillex-ridrup", url: "http://localhost");
+        airlock = AirlockClient(ship: "~zod", code: "lidlut-tabwed-pillex-ridrup", url: "http://localhost");
         if(airlock == nil) {
             XCTFail();
             return;
